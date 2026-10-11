@@ -1,0 +1,22 @@
+# The @argszero/dsh-mcp-toolview bundle patch.
+#
+# It mounts with an empty config: the plugin owns no settings, opens no
+# connection, and changes no harness behaviour. The node half is inert; the
+# substance is the browser half, which the Web shell discovers through this
+# package's `dsh.client` declaration (the same row that mounts this node half —
+# see @deepseek-ai/dsh-client-modules, which scans the host Loader's entries for
+# packages declaring `dsh.client`).
+#
+# Inside a bundle whose patch already has rows, add the same `insert` entry
+# instead of a second document.
+#
+# To drop the MCP rows and fall back to the shipped generic Tool card, disable
+# the row (or remove it) in your profile:
+#
+#   - set:
+#       - id: mcp-toolview
+#         disabled: true
+
+- insert:
+    - id: mcp-toolview
+      name: '@argszero/dsh-mcp-toolview'
