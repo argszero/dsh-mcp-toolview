@@ -1,7 +1,7 @@
 {
   "name": "@argszero/dsh-mcp-toolview",
   "description": "MCP tool calls rendered as the calls they are: the dsh Web Tool row is a keyed seat dispatched by wire Tool name, so a family of names that only exists after an MCP server answers tools/list falls back to the generic card — which flattens `mcp__<server>__<tool>` into one line of argument text. This browser-half plugin learns the names from the Session event window (request/header's complete catalog, tool/call, and the PTC dispatch events) and claims one keyed entry per name: a server chip, the tool name, an argument summary, and the whole wire name preserved in the expanded body. It replaces nothing — an unclaimed name still renders the shipped generic row, another plugin's entry for the same key is left untouched, and disabling the row removes every contribution.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publishConfig": {
     "access": "public"
   },
